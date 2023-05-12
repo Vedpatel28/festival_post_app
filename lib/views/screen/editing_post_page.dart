@@ -10,6 +10,6 @@ class editingpostpage extends StatefulWidget {
 class _editingpostpageState extends State<editingpostpage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
