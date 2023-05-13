@@ -10,7 +10,7 @@ class back_button extends StatelessWidget {
         Navigator.of(context).pop();
       },
       icon: const Icon(Icons.arrow_back_ios_new_rounded),
-      color: Colors.red.shade700,iconSize: 30,
+      color: Colors.black87,iconSize: 25,
     );
   }
 }
