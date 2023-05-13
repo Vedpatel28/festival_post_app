@@ -53,7 +53,7 @@ class _homepageState extends State<homepage> {
                 ),
               ),
               SizedBox(height: s.height * 0.25),
-              // create new Button
+              // Festival Post Edit
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).pushNamed(allroutes.festivalselectpage);
@@ -70,8 +70,8 @@ class _homepageState extends State<homepage> {
                       ],
                     ),
                     borderRadius: const BorderRadius.horizontal(
-                      right: Radius.elliptical(50, 40),
-                      left: Radius.circular(30),
+                      right: Radius.elliptical(30, 40),
+                      left: Radius.circular(20),
                     ),
                   ),
                   child: Padding(
@@ -79,6 +79,55 @@ class _homepageState extends State<homepage> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+                        Text(
+                          "Festival Post",
+                          style: GoogleFonts.grenze(
+                            textStyle: TextStyle(
+                              color: Colors.red.shade700,
+                              fontSize: s.height * 0.03,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const Spacer(),
+                        Icon(
+                          Icons.image_outlined,
+                          color: Colors.red.shade700,
+                          size: s.height * 0.04,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: s.height * 0.08),
+              // Create new Button
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(allroutes.editingpostpage);
+                },
+                child: Container(
+                  height: s.height * 0.085,
+                  width: s.width * 0.6,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.amber.shade600,
+                        Colors.amberAccent,
+                        Colors.amber.shade50,
+                      ],
+                    ),
+                    borderRadius: const BorderRadius.horizontal(
+                      right: Radius.elliptical(30, 40),
+                      left: Radius.circular(20),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        // Create new Text
                         Text(
                           "Create New",
                           style: GoogleFonts.grenze(
@@ -92,53 +141,6 @@ class _homepageState extends State<homepage> {
                         const Spacer(),
                         Icon(
                           Icons.arrow_forward_rounded,
-                          color: Colors.red.shade700,
-                          size: s.height * 0.04,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: s.height * 0.08),
-              // Save Image Button
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: s.height * 0.085,
-                  width: s.width * 0.6,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.amber.shade600,
-                        Colors.amberAccent,
-                        Colors.amber.shade50,
-                      ],
-                    ),
-                    borderRadius: const BorderRadius.horizontal(
-                      right: Radius.elliptical(50, 40),
-                      left: Radius.circular(30),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        // Save Image Text
-                        Text(
-                          "Saved Image",
-                          style: GoogleFonts.grenze(
-                            textStyle: TextStyle(
-                              color: Colors.red.shade700,
-                              fontSize: s.height * 0.03,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        const Spacer(),
-                        Icon(
-                          Icons.save_alt_rounded,
                           color: Colors.red.shade700,
                           size: s.height * 0.04,
                         ),
@@ -163,8 +165,8 @@ class _homepageState extends State<homepage> {
                       ],
                     ),
                     borderRadius: const BorderRadius.horizontal(
-                      right: Radius.elliptical(50, 40),
-                      left: Radius.circular(30),
+                      right: Radius.elliptical(30, 40),
+                      left: Radius.circular(20),
                     ),
                   ),
                   child: Padding(
@@ -173,7 +175,7 @@ class _homepageState extends State<homepage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Menu",
+                          "Saved Image",
                           style: GoogleFonts.grenze(
                             textStyle: TextStyle(
                               color: Colors.red.shade700,
@@ -184,7 +186,7 @@ class _homepageState extends State<homepage> {
                         ),
                         const Spacer(),
                         Icon(
-                          Icons.menu,
+                          Icons.download_outlined,
                           color: Colors.red.shade700,
                           size: s.height * 0.04,
                         ),
@@ -196,6 +198,31 @@ class _homepageState extends State<homepage> {
             ],
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            Navigator.of(context).pop();
+          });
+        },
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: LinearGradient(
+              colors: [
+                Colors.amber.shade600,
+                Colors.amberAccent,
+                Colors.amber.shade50,
+              ],
+            ),
+          ),
+          child: Icon(
+            Icons.exit_to_app,
+            color: Colors.red.shade700,
+          ),
+        ),
       ),
     );
   }

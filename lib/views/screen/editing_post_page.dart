@@ -1,3 +1,4 @@
+import 'package:festival_post_app/utils/back_button.dart';
 import 'package:flutter/material.dart';
 
 class editingpostpage extends StatefulWidget {
@@ -10,6 +11,11 @@ class editingpostpage extends StatefulWidget {
 class _editingpostpageState extends State<editingpostpage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        leading: const back_button(),
+        title: const Text("Edit"),
+      ),
+    );
   }
 }
