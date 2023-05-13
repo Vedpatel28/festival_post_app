@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         allroutes.homepage: (context) => const homepage(),
-        allroutes.festivalselectpage: (context) => const festivalselectpage(),
+        allroutes.festivalselectpage: (context) => festivalselectpage(),
         allroutes.editingpostpage: (context) => const editingpostpage(),
       },
     );
