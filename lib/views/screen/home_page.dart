@@ -104,7 +104,7 @@ class _homepageState extends State<homepage> {
               // Create new Button
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).pushNamed(allroutes.editingpostpage);
+                  Navigator.of(context).pushNamed(allroutes.festivalselectpage);
                 },
                 child: Container(
                   height: s.height * 0.085,
