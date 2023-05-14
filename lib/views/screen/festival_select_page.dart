@@ -236,7 +236,7 @@ class _festivalselectpageState extends State<festivalselectpage> {
                 Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.all(14),
+                    padding: const EdgeInsets.all(0.2),
                     child: Container(
                       margin: EdgeInsets.all(20),
                       child: GridView.builder(
@@ -429,3 +429,12 @@ class _festivalselectpageState extends State<festivalselectpage> {
     );
   }
 }
+
+
+
+/*
+*
+*     Stack ma Colam le va ni & te ma Bane Expandent moki de va na........
+*
+*
+* */
