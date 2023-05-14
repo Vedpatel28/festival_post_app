@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stickereditor/stickereditor.dart';
 
+import '../../utils/image_utils.dart';
+
 class editingpostpage extends StatefulWidget {
   const editingpostpage({Key? key}) : super(key: key);
 
@@ -86,33 +88,71 @@ class _editingpostpageState extends State<editingpostpage> {
         ),
       ),
       body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          color: Colors.blue,
-          child: Stack(
-            children: [
-              TextEditingBox(
-                fonts: [],
-                boundHeight: 200,
-                boundWidth: 100,
-                isSelected: true,
-                palletColor: [],
-                newText: TextModel(
-                  name: 'Text EditingBox',
-                  textStyle: GoogleFonts.pacifico(
-                    fontSize: 25,
-                    color: Colors.white,
-                  ),
-                  top: 5,
-                  isSelected: true,
-                  textAlign: TextAlign.center,
-                  scale: 1,
-                  left: 5,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: s.height * 0.1,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.cyanAccent.shade100,
+                ),
+                alignment: Alignment.center,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    // StickerEditingView(
+                    //   isnetwork: false,
+                    //   height: 300,
+                    //   width: 300,
+                    //   imgUrl: festivalimage[index],
+                    //   fonts: const ["Ved"],
+                    //   palletColor: [],
+                    //   assetList: const [],
+                    // ),
+                    SingleChildScrollView(
+                      child: StickerEditingBox(
+                        boundHeight: 1,
+                        boundWidth: 1,
+                        pictureModel: PictureModel(
+                          isNetwork: true,
+                          isSelected: false,
+                          left: 0,
+                          top: 0,
+                          scale: 8,
+                          stringUrl: festivalimage[index],
+                        ),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      child: TextEditingBox(
+                        fonts: const [
+                          "ved",
+                        ],
+                        boundHeight: 500,
+                        boundWidth: 200,
+                        isSelected: true,
+                        palletColor: const [],
+                        newText: TextModel(
+                          name: 'Text EditingBox',
+                          textStyle: GoogleFonts.candal(
+                              fontSize: 25, color: Colors.lime),
+                          top: 100,
+                          isSelected: true,
+                          textAlign: TextAlign.center,
+                          scale: 1,
+                          left: 20,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
