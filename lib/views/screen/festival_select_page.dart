@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:festival_post_app/utils/back_button.dart';
 import 'package:festival_post_app/utils/image_utils.dart';
 import 'package:festival_post_app/utils/utils_routes_page.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

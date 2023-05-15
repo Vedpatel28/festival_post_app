@@ -136,29 +136,29 @@ class _editingpostpageState extends State<editingpostpage> {
                         boundWidth: 200,
                         isSelected: true,
                         palletColor: const [],
-                        newText: TextModel(
-                          name: 'Enter',
-                          textStyle: GoogleFonts.goudyBookletter1911(
-                            textStyle: const TextStyle(
-                              color: Colors.limeAccent,
-                            ),
-                          ),
-                          top: 10,
-                          isSelected: true,
-                          textAlign: TextAlign.center,
-                          scale: 0,
-                          left: 0,
-                        ),
                         // newText: TextModel(
-                        //   name: '_',
-                        //   textStyle: GoogleFonts.candal(
-                        //       fontSize: 25, color: Colors.lime),
-                        //   top: 100,
+                        //   name: 'Enter',
+                        //   textStyle: GoogleFonts.goudyBookletter1911(
+                        //     textStyle: const TextStyle(
+                        //       color: Colors.limeAccent,
+                        //     ),
+                        //   ),
+                        //   top: 10,
                         //   isSelected: true,
                         //   textAlign: TextAlign.center,
-                        //   scale: 1,
-                        //   left: 20,
+                        //   scale: 0,
+                        //   left: 0,
                         // ),
+                        newText: TextModel(
+                          name: '_',
+                          textStyle: GoogleFonts.candal(
+                              fontSize: 25, color: Colors.lime),
+                          top: 100,
+                          isSelected: true,
+                          textAlign: TextAlign.center,
+                          scale: 1,
+                          left: 20,
+                        ),
                       ),
                     ),
                   ],

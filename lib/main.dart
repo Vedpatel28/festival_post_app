@@ -1,6 +1,7 @@
 import 'package:festival_post_app/utils/utils_routes_page.dart';
 import 'package:festival_post_app/views/screen/editing_post_page.dart';
 import 'package:festival_post_app/views/screen/festival_select_page.dart';
+import 'package:festival_post_app/views/screen/festival_splash_screen.dart';
 import 'package:festival_post_app/views/screen/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -20,9 +21,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
+      initialRoute: allroutes.splashscreen,
       routes: {
         allroutes.homepage: (context) => const homepage(),
-        allroutes.festivalselectpage: (context) => festivalselectpage(),
+        allroutes.festivalselectpage: (context) => const festivalselectpage(),
+        allroutes.splashscreen: (context) => const festivalsplashscreen(),
         allroutes.editingpostpage: (context) => const editingpostpage(),
       },
     );
